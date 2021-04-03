@@ -24,12 +24,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Blog.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -42,7 +42,13 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Blog.wsgi.application'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 
 DATABASES = {
     'default': {
@@ -66,7 +72,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'fa-ir'
+LANGUAGE_CODE = 'fa'
 
 TIME_ZONE = 'Iran'
 
@@ -75,5 +81,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+ROOT_URLCONF = 'Blog.urls'
+
+WSGI_APPLICATION = 'Blog.wsgi.application'
 
 STATIC_URL = '/static/'
