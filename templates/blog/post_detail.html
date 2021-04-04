@@ -3,8 +3,12 @@
 {% block content %}
 
     <div class="post-entry">
+    	<p>{{ post.author }}</p>
         <h2>{{ post.title }}</h2>
         <p>{{ post.body }}</p>
     </div>
+
+    <p><a href="{% url 'post_update' post.pk %}">ویرایش</a></p>
+    <p><a href="{% url 'post_delete' post.pk %}">حذف</a></p>
 
 {% endblock content %}
