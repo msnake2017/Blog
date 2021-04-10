@@ -17,18 +17,18 @@ class BlogDetailView(DetailView):
 
 
 class BlogCreateView(CreateView):
-	model = Post
-	fields = '__all__'
-	template_name = 'blog/post_create.html'
+    model = Post
+    fields = '__all__'
+    template_name = 'blog/post_create.html'
 
 
 class BlogUpdateView(UpdateView):
-	model = Post
-	fields = ('title', 'body')
-	template_name = 'blog/post_update.html'
+    model = Post
+    fields = ('title', 'body')
+    template_name = 'blog/post_update.html'
 
 
 class BlogDeleteView(DeleteView):
-	model = Post
-	template_name = 'blog/post_delete.html'
-	success_url = reverse_lazy('home')
+    model = Post
+    template_name = 'blog/post_delete.html'
+    success_url = reverse_lazy('home')
