@@ -1,6 +1,6 @@
 import os
 
-from .local_settings import *
+# from .local_settings import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -99,4 +99,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# local_settings -----------------------------------------------
+
+SECRET_KEY = 'efeu_oxav_9-ol+72w^4scxuht*v7x$mz3ag@d(!ihj2wy=2=6'
+
+ALLOWED_HOSTS = [
+    '*'
+]
+
+DEBUG = True
 
