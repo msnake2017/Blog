@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-12 13:04+0430\n"
+"POT-Creation-Date: 2021-04-16 17:07+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: blog/models.py:9
-msgid "author"
-msgstr "نویسنده"
+#: articles/apps.py:7 articles/models.py:21
+msgid "Articles"
+msgstr "مقالات"
 
-#: blog/models.py:10
+#: articles/models.py:9 blog/models.py:10
 msgid "title"
 msgstr "عنوان"
 
-#: blog/models.py:11
+#: articles/models.py:10 blog/models.py:11
 msgid "body"
-msgstr "بدنه"
+msgstr "متن"
+
+#: articles/models.py:13
+msgid "date"
+msgstr "تاریخ انتشار"
+
+#: articles/models.py:17 blog/models.py:9
+msgid "author"
+msgstr "نویسنده"
+
+#: articles/models.py:20
+msgid "Article"
+msgstr "مقاله"
 
 #: blog/models.py:14
 msgid "post"

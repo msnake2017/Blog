@@ -8,6 +8,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
     'pages.apps.PagesConfig',
+    'articles.apps.ArticlesConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
