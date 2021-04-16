@@ -7,14 +7,14 @@
 	<h1>LOGIN</h1>
 
     <form method="post">
-    	<div class="row"></div>
+    	<div class="row">
 	    	<div class="col-4">	
 		    	{% csrf_token %}
 		    	{{ form|crispy }}
 		    	<br>
 		    	<button class="btn btn-success btn-lg" type="submit">ورود</button>
+		    	<a href="{% url 'password_reset' %}">forgot your password?</a>
 		    </div>
 		</div>
     </form>
-
 {% endblock %}

@@ -37,6 +37,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'signup' %}">signup</a>
                         </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'password_change' %}">change password</a>
+                        </li>
                     {% endif %}
                 </ul>
             </div>
