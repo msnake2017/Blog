@@ -22,3 +22,18 @@ class UsersTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 10)
+        self.assertTemplateUsed(response, 'registration/signup.html')
+
+    def test_user_signup_form(self):
+
+        get_user_model().objects.create_user(
+                username='test_username_2',
+                email='test_email@tested.com',
+                password='secret',
+                age=20
+            )
+        self.assertEqual(get_user_model().objects.all().count(), 2)
+        self.assertEqual(get_user_model().objects.all()[1].username,
+                         'test_username_2')
+        self.assertEqual(get_user_model().objects.all()[1].email,
+                         'test_email@tested.com')
