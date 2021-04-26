@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+	<h1>Edit</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <span style="align-content: center">
+            <input class="btn btn-primary btn-successful" type="submit" value="Change!">
+        </span>
+    </form>
+
+
+{% endblock %}

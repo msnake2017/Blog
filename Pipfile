@@ -9,6 +9,7 @@ flake8 = "*"
 gunicorn = "==19.9.0"
 whitenoise = "==3.3.1"
 django-crispy-forms = "==1.7.2"
+pipfile = "*"
 
 [dev-packages]
 

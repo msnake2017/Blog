@@ -9,7 +9,7 @@
 	{% for article in articles %}
 		<div class="card">
 			<div class="card-header">
-				<span class="font-weight-bold">{{ article.title }}</span>
+				<span class="font-weight-bold"><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></span>
 				<span class="text-muted">by {{ article.author }} |
 					{{ article.date }}</span>
 			</div>
@@ -17,8 +17,9 @@
 				{{ article.body }}
 			</div>
 			<div class="card-footer text-center text-muted">
-				<a href="#">Edit</a> | <a href="#">Delete</a>
+				<a href="{% url 'article_edit' article.pk%}">Edit</a> | <a href="{% url 'article_delete' article.pk %}">Delete</a>
 			</div>
+        </div>
 	{% endfor %}
 
 	{% else %}
@@ -26,5 +27,7 @@
 	<h1>No articles yet...</h1>
 
 	{%endif%}
+
+    <a href="{% url 'article_create' %}"><button class="btn btn-info btn-lg" type="button" value="New Post+">New Post+</button></a>
 
 {% endblock %}
