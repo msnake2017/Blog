@@ -8,4 +8,12 @@
 	<p>{{article.author}}: </p>
 	<h3>{{article.body}}</h3>
 
+    <br>
+
+    {% for comment in article.comments.all %}
+
+        <p>{{ comment.author }}: {{ comment.comment }}</p>
+
+    {% endfor %}
+
 {% endblock %}
